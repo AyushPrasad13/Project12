@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UPI Payment</title>
+  <style>
+    body { font-family: sans-serif; background: #fef6e4; padding: 30px; }
+    .box { background: white; padding: 25px; border-radius: 10px; max-width: 500px; margin: auto; box-shadow: 0 0 10px #ccc; }
+    input, button { width: 100%; padding: 10px; margin-top: 15px; }
+    button { background: #2d572c; color: white; border: none; border-radius: 5px; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Pay via UPI</h1>
+    <form action="thankyou.html">
+      <label>Your Name:</label>
+      <input type="text" name="name" placeholder="e.g. Sadaf" required>
+      <label>UPI ID:</label>
+      <input type="text" name="upi" placeholder="e.g. sadaf@upi" required>
+      <button type="submit">Pay ₹250</button>
+    </form>
+  </div>
+</body>
+</html>
