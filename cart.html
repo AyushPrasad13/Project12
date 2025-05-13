@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cart – Café Code Breakers</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fef6e4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 36px;
+      color: #4d2c19;
+      margin-bottom: 30px;
+    }
+
+    #cart-table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fffaf1;
+      border: 1px solid #f0d9b5;
+      margin-bottom: 30px;
+    }
+
+    #cart-table th, #cart-table td {
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      border-top: 1px solid #f0d9b5;
+    }
+
+    #cart-table th {
+      background-color: #fcd5b5;
+      color: #4d2c19;
+      font-size: 18px;
+    }
+
+    .cart-summary {
+      text-align: right;
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .payment-section {
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    #payment-method {
+      padding: 8px 12px;
+      margin-top: 10px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .proceed-button {
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #2d572c;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1e3e1e;
+    }
+
+    .empty-msg {
+      text-align: center;
+      font-style: italic;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">🛒 Your Cart – Café Code Breakers</h1>
+
+    <table id="cart-table">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Items will be inserted here dynamically -->
+        <tr>
+          <td colspan="3" class="empty-msg">Your cart is currently empty.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      <h2>Subtotal: ₹0</h2>
+    </div>
+
+    <div class="payment-section">
+      <label for="payment-method"><strong>Select Payment Method:</strong></label><br>
+      <select id="payment-method">
+        <option value="upi">UPI</option>
+        <option value="cash">Cash</option>
+        <option value="card">Credit/Debit Card</option>
+      </select>
+    </div>
+
+    <div class="proceed-button">
+      <a href="payment.html" class="btn">Proceed to Payment</a>
+    </div>
+  </div>
+</body>
+</html>
