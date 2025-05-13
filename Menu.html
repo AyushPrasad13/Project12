@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+
+  <title>Menu | Code Breakers Cafe</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('https://thumbs.dreamstime.com/b/empty-bar-counter-cafe-interior-restaurant-background-349054133.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: Arial, sans-serif;
+      color: white;
+    }
+
+    /* Fixed header style */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 20px 0;
+      background-color: rgba(0, 0, 0, 0.5); /* Optional for better contrast */
+      text-align: center;
+      z-index: 1000;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    /* Section below the header */
+    section {
+      margin-top: 120px; /* Give space for fixed header */
+      padding: 20px;
+      text-align: center;
+      height: calc(100vh - 120px); /* Full screen height minus header */
+      overflow-y: auto; /* Enables scrolling */
+    }
+
+    /* Styling for tables */
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+      table-layout: fixed;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      word-break: break-word;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    th {
+      background-color: #333;
+      color: white;
+    }
+
+    .menu-item {
+      max-width: 200px;
+      overflow-wrap: break-word;
+    }
+
+    /* Button styling */
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e67e22;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>☕ Code Breakers Cafe</h1>
+    <h2>Our Menu</h2>
+  </header>
+
+  <section>
+    <form id="menuForm">
+
+      <!-- ☕ Coffee Section -->
+      <h3>☕ Coffee</h3>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Select</th>
+        </tr>
+        <tr>
+          <td class="menu-item">Espresso</td>
+          <td>₹80</td>
+          <td><input type="checkbox" value="Espresso - ₹80"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Cappuccino</td>
+          <td>₹120</td>
+          <td><input type="checkbox" value="Cappuccino - ₹120"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Grilled Chocolate Cappuccino with Hazelnut Foam</td>
+          <td>₹180</td>
+          <td><input type="checkbox" value="Grilled Chocolate Cappuccino with Hazelnut Foam - ₹180"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Latte</td>
+          <td>₹150</td>
+          <td><input type="checkbox" value="Latte - ₹150"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Mocha</td>
+          <td>₹170</td>
+          <td><input type="checkbox" value="Mocha - ₹170"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Iced Coffee</td>
+          <td>₹140</td>
+          <td><input type="checkbox" value="Iced Coffee - ₹140"></td>
+        </tr>
+        <!-- Add more coffee items as needed -->
+      </table>
+
+      <!-- 🍵 Tea Section -->
+      <h3>🍵 Tea</h3>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Select</th>
+        </tr>
+        <tr>
+          <td class="menu-item">Masala Chai</td>
+          <td>₹60</td>
+          <td><input type="checkbox" value="Masala Chai - ₹60"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Green Tea</td>
+          <td>₹70</td>
+          <td><input type="checkbox" value="Green Tea - ₹70"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Lemon Tea</td>
+          <td>₹65</td>
+          <td><input type="checkbox" value="Lemon Tea - ₹65"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Mint Tea</td>
+          <td>₹75</td>
+          <td><input type="checkbox" value="Mint Tea - ₹75"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Herbal Tea</td>
+          <td>₹80</td>
+          <td><input type="checkbox" value="Herbal Tea - ₹80"></td>
+        </tr>
+        <!-- Add more tea items -->
+      </table>
+
+      <!-- 🍪 Snacks Section -->
+      <h3>🍪 Snacks</h3>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Select</th>
+        </tr>
+        <tr>
+          <td class="menu-item">Veg Sandwich</td>
+          <td>₹100</td>
+          <td><input type="checkbox" value="Veg Sandwich - ₹100"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">French Fries</td>
+          <td>₹90</td>
+          <td><input type="checkbox" value="French Fries - ₹90"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Spring Rolls</td>
+          <td>₹110</td>
+          <td><input type="checkbox" value="Spring Rolls - ₹110"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Onion Rings</td>
+          <td>₹120</td>
+          <td><input type="checkbox" value="Onion Rings - ₹120"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Cheese Balls</td>
+          <td>₹130</td>
+          <td><input type="checkbox" value="Cheese Balls - ₹130"></td>
+        </tr>
+        <!-- Add more snack items -->
+      </table>
+
+      <!-- 🧁 Desserts Section -->
+      <h3>🧁 Desserts</h3>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Select</th>
+        </tr>
+        <tr>
+          <td class="menu-item">Chocolate Muffin</td>
+          <td>₹70</td>
+          <td><input type="checkbox" value="Chocolate Muffin - ₹70"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Brownie</td>
+          <td>₹90</td>
+          <td><input type="checkbox" value="Brownie - ₹90"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Cupcake</td>
+          <td>₹80</td>
+          <td><input type="checkbox" value="Cupcake - ₹80"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Cheesecake</td>
+          <td>₹150</td>
+          <td><input type="checkbox" value="Cheesecake - ₹150"></td>
+        </tr>
+        <tr>
+          <td class="menu-item">Pudding</td>
+          <td>₹130</td>
+          <td><input type="checkbox" value="Pudding - ₹130"></td>
+        </tr>
+        <!-- Add more dessert items -->
+      </table>
+
+      <button type="button" onclick="addToCart()">Add Selected to Cart</button>
+
+    </form>
+  </section>
+
+</body>
+</html>
