@@ -1,4 +1,4 @@
-e<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -76,15 +76,18 @@ e<!DOCTYPE html>
     </button>
   </div>
 
+  <!-- Redirection logic -->
   <script>
     function showLoginAlert() {
       alert("Logging in to Code Breakers Cafe...");
-      window.location.href = "https://gregarious-puffpuff-639cd1.netlify.app/"; 
-      return false; 
+      window.location.href = "https://gregarious-puffpuff-639cd1.netlify.app/";
+      return false; // prevent default form submit
     }
 
     function handleRedirect() {
-      showLoginAlert(); 
+      // Call same logic as the form submit
+      return showLoginAlert();
+    }
   </script>
 </body>
 </html>
